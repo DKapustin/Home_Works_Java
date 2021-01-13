@@ -37,7 +37,16 @@ public class MyLinkedList<E> implements ILinkedList<E> {
     }
 
     @Override
-    public void claer() {
+    public void clear() {
+        int count = 0;
+        while (count<this.size()){
+            this.set(count,null);
+            count++;
+        }
+    }
+
+
+    public void clearAll() {
         while (head!=null){
             if (head.getNextNode()!=null){
                 Node current = head.getNextNode();
