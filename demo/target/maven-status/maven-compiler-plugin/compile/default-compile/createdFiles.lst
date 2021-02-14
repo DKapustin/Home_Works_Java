@@ -1,0 +1,4 @@
+com\NC\demo\UserApplication.class
+com\NC\controllers\UserController.class
+com\NC\models\User.class
+com\NC\services\interfaces\UserService.class

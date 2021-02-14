@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org/">
+
+<head>
+    <title>Getting Started: Handing Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<style type="text/css">
+   body { margin: 0; }
+   #sidebar, #content { position: absolute; }
+   #sidebar, #content { overflow: auto; padding: 10px; }
+	#sidebar {
+		background: #ECF5E4; border-right: 1px solid #231F20;
+		top: 82px; /* Расстояние от верхнего края */
+		bottom: 0; /* Расстояние снизу  */
+   }
+ </style>
+<div id="sidebar">
+<h1>Create User</h1>
+<form action="#" th:action="@{/form}" th:object="${form}" method="post">
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+    <p><b>Фамилия:</b>
+        <input type="text" size="40" th:field = "*{SecondName}">
+    </p>
+    <p><b>Имя:</b>
+        <input type="text" size="40" th:field = "*{FirstName}">
+    </p>
+    <p><b>Отчество:</b>
+        <input type="text" size="40" th:field = "*{Patronymic}">
+    </p>
+    <p><b>Возраст:</b>
+        <input type="number" size="40" th:field = "*{Age}">
+    </p>
+    <p><b>Уровень зарплаты:</b>
+        <input type="number" size="40" th:field = "*{Salary}">
+    </p>
+    <p><b>E-mail:</b>
+        <input type="email" size="40" th:field = "*{Email}">
+    </p>
+    <p><b>Место работы:</b>
+        <input type="text" size="40" th:field = "*{Work}">
+    </p>
+    <p><input type="submit" value="Create" /> <input type="reset" value="Reset" /></p>
+</form>
+</div>d>
+</body>
+</html>
